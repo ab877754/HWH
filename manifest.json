@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Zoom Speaker Logger",
+    "version": "1.0",
+    "description": "Tracks who is speaking in Zoom and logs what they say.",
+    "permissions": ["scripting", "activeTab", "downloads"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.zoom.us/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": ["*://*.zoom.us/*"]
+  }
+  
