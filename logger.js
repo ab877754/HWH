@@ -5,7 +5,7 @@
     recognition.interimResults = false;
     recognition.lang = 'en-US';
   
-    let currentSpeaker = "Unknown";
+    let currentSpeaker = "Hero";
   
     // Detect speaker name from Zoom UI
     function detectSpeaker() {
